@@ -36,3 +36,57 @@ early-warning-r/
       - h2o_monthly.R # Train model via H2O
       - prepare_shiny_data.R # Format data for Shiny app
 
+
+---
+
+## Model Logic
+
+The system:
+1. Loads multi-source indicators
+2. Imputes missing values and harmonizes time/frequency
+3. Finds changepoints in country time series 
+4. Engineers lags and composite predictors
+5. Trains models using H2O's scalable machine learning framework
+6. Outputs probabilistic risks for forced displacement
+
+---
+
+## Data & Shiny App Access
+
+This repo does **not** include:
+- The original datasets
+- The Shiny application interface
+- Output files or internal thresholds
+
+However, the code is modular and can be adapted to public or alternative datasets with the same structure.
+
+---
+
+## Evaluation & Results
+
+A comprehensive evaluation has been conducted on historical data across data from 2020 to 2024, with results showing:
+
+  
+---
+
+## How to Run
+Run scripts in the following order:
+
+```r
+# Data sets
+source("acled_data.R")
+source("gdelt_data.R")
+source("inform_data.R")
+source("FAO_prices.R")
+
+# Prepare model input
+source("meta_script/ImputedMonthlyData.R")
+source("meta_script/monthly_lags_differences.R")
+source("meta_script/monthly_cp.R")
+source("meta_script/reweigh.R")
+
+# Model training and Shiny prep
+source("meta_script/h2o_monthly.R")
+source("meta_script/prepare_shiny_data.R")
+```
+
