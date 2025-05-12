@@ -23,16 +23,16 @@ Forecasts are produced using gradient boosting models (via `h2o`) and fed into a
 
 ## Repository Structure
 early-warning-r/
-├── acled_data.R # Load and process ACLED event data
-├── gdelt_data.R # Load and aggregate GDELT indicators
-├── inform_data.R # Fetch INFORM scores
-├── FAO_prices.R # Preprocess FAO food price data
+  - acled_data.R # Load and process ACLED event data
+  - gdelt_data.R # Load and aggregate GDELT indicators
+  - inform_data.R # Fetch INFORM scores
+  - FAO_prices.R # Preprocess FAO food price data
 
-├── meta_script/
-│ ├── ImputedMonthlyData.R # Master script: merge + impute
-│ ├── monthly_lags_differences.R # Generate lagged predictors
-│ ├── monthly_cp.R # Create composite indicators
-│ ├── reweigh.R # Apply weight adjustments
-│ ├── h2o_monthly.R # Train model via H2O
-│ └── prepare_shiny_data.R # Format data for Shiny app
+  - meta_script/
+      - ImputedMonthlyData.R # Master script: merge + impute
+      - monthly_lags_differences.R # Generate lagged predictors
+      - monthly_cp.R # Find changepoints in country time series
+      - reweigh.R # Transform, normalise and standardise variables
+      - h2o_monthly.R # Train model via H2O
+      - prepare_shiny_data.R # Format data for Shiny app
 
