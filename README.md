@@ -64,7 +64,9 @@ However, the code is modular and can be adapted to public or alternative dataset
 
 ## Evaluation & Results
 
-A comprehensive evaluation has been conducted on historical data across data from 2020 to 2024, with results showing:
+An evaluation has been conducted on historical data across data from 2020 to 2024, which can be found here:
+[View Interactive Evaluation Report](https://geraldine28.github.io/EarlyWarning/)
+
 
   
 ---
