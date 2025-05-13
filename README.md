@@ -1,6 +1,13 @@
 # Early Warning of Forced Displacement Risk (R) 
 
 This repository contains the R codebase behind a predictive early warning risk model designed to anticipate forced displacement risks. 
+The script trains three OVO models for a three class problem. 
+The classes are:
+
+- The risk of producing refugee outflows above a threshold (P2)
+- The risk of producing a sudden increase in refugee outflows that lies above the threshold (P1)
+- Every other case (P3)
+
 It ingests multiple data streams and generates forecasts at the monthly national level to support anticipatory action.
 
 > **Note**: Due to the sensitive nature of the data and outputs, only code is shared here. The full Shiny app and datasets are restricted.
